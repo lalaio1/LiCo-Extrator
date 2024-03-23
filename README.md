@@ -11,13 +11,6 @@ Icon Extractor is a Python application designed to extract icons from various fi
 ## Requirements
 - Python 3.x
 
-## Installation
-To install the required dependencies, simply run the following command:
-
-```bash
-python3 -m pip install -r requirements.txt
-```
-
 ## Usage
 1. Run the `start.py` script.
 2. The application will automatically check for dependencies, download them if necessary, and then launch.
@@ -47,8 +40,10 @@ git clone https://github.com/your-username/your-repo.git
 ```
 
 4. Navigate to the directory where you cloned the repository.
-5. Run the following command:
-
+ ```bash
+cd LiCo-Extrator
+```
+6. Run the following command:
 ```bash
 python3 start.py
 ```
@@ -60,22 +55,17 @@ python3 start.py
 4. Extract the downloaded .zip file to your desired location.
 5. Open a command prompt.
 6. Navigate to the directory where you extracted the .zip file.
-7. Run the following command:
+7. Run the following command or click:
 
 ```bash
 python start.py
 ```
 
-## Example
+
 ![Icon Extractor Example](./assets/3920cb444aaaded4ae910e0745147c0d.gif)
 
-## Contributing
-Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
+##Discord: lalaio1
+##Github: lalaio1
 
 ## License
 This project is licensed under the [MIT License](./LICENSE).
-```
-
-Replace `"https://github.com/your-username/your-repo.git"` with the actual URL of your GitHub repository. 
-
-Save this content into your README.md file in the root directory of your project. Make sure to adjust the paths of the images (`./assets/banner.png` and `./assets/example.gif`) to match the actual locations of your images.
