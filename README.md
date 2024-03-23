@@ -4,7 +4,7 @@ Got it! Below is the updated README.md file with instructions for downloading th
 ```markdown
 # Icon Extractor
 
-![Icon Extractor](./assets/banner.png)
+![Icon Extractor](./assets/Captura de tela 2024-03-23 191750.png)
 
 Icon Extractor is a Python application designed to extract icons from various file types. It supports both Windows and Linux platforms and provides a user-friendly interface.
 
