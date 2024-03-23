@@ -1,10 +1,10 @@
 # LiCo-Extrator
 Got it! Below is the updated README.md file with instructions for downloading the project on Linux using `git clone` and on Windows using the GitHub web interface to download the .zip file:
 
-```markdown
+
 # Icon Extractor
 
-![Icon Extractor](./assets/Captura de tela 2024-03-23 191750.png)
+![Icon Extractor](./assets/Captura.png)
 
 Icon Extractor is a Python application designed to extract icons from various file types. It supports both Windows and Linux platforms and provides a user-friendly interface.
 
