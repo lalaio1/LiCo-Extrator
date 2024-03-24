@@ -12,6 +12,53 @@ cor_ciano = "\033[1;36m"
 cor_branca = "\033[1;37m"
 cor_reset = "\033[0m"  
 
+
+   
+
+def dragondfa():
+    banner = f"""{cor_vermelha}
+
+
+──────────────▒███░───░████████▒ 
+───────────█████▒░█████░▒▒▒▒▒▒█████ 
+──────────██▒▒▒▒██████████████▒▒▒██░ 
+─────────██▒▒▒▒███▒██▒██▒▒█████▒░▒██ 
+─────────█░▒▒▒██▒████████████▒█▒▒▒█░ 
+─────────█▒▒▒▒██▒▒▒░▓▓▒░▓▒▒████▒▒██ 
+─────────█▒▒▒▒██▒▒▒▒▒▒▒▒▒▒▒█▒█░▒████ 
+─────███████████▒▒▒▒▒▒▒▒██████▒██▓▒███ 
+─────██▒▒▒▒▒▒█████▒▒▒▒▒▒▒▒█████▒▒▒▒▒██ 
+───────██▒▒▒▒▒▒▒▓██████▒▒▒▒▒██▒▒▒▒▒▒███ 
+────█████▒▒▒▒▒▒▒▒▒▒████▒▒▒██▒▒▒▒▒▒███ 
+────██▒▒▒███▒▒▒▒▒▒▒▒▒▒▓█████▒▒▒▒▒███ 
+────███▒▒▒▒███▒▒▒▒▒▒▒▒▒▒▒███▓▒▒███ 
+──────█████▒▒████▒▒▒▒▒▒▒▒▒▒█████ 
+─────────████▒▒██████▒▒▒▒█████ 
+────────────███▒▒██████████ 
+──────────────████▓──█▓█ 
+────────────────────████ 
+────────────────────█░█─────█████████ 
+────────────────────█▓█───█████████████ 
+──░█████████───────████──██▓███▒▓████ 
+─█████████████─────█░███████░██████ 
+───████░▒███▒██────█▓██████████ 
+─────█████▓▒█████─████ 
+─────────██████████▓█ 
+──────────────────█▓█────████▒█▓▒█ 
+─────────────────█▓██──█████████████ 
+─────────────────█▓█──██▒████░█████ 
+────────────────██████████▒██████ 
+────────────────█▓███████████ 
+───────────────████ 
+───────────────█▒█ 
+───────────────███ 
+
+            """
+    print(banner)
+
+# Chame a função 'imprimir_banner()' onde você deseja exibir o banner
+
+
 def instalar_bibliotecas_necessarias():
     bibliotecas = [
     "qdarkstyle",
@@ -72,6 +119,7 @@ def imprimir_banner():
     print(f"{cor_azul} {cor_roxa} {banner}{cor_reset}")
 
 
+
 if __name__ == "__main__":
     os.system("clear" if os.name != "nt" else "cls")
 
@@ -81,7 +129,7 @@ if flag_status == "True":
     print(f"{cor_azul}[{cor_verde}+{cor_azul}] Verificação já foi executada anteriormente. Saindo...{cor_reset}")
     os.system("clear" if os.name != "nt" else "cls")
     if os.name != "posix":
-        imprimir_banner()
+        dragondfa()
         os.system(f"{sys.executable} ./conf/scripts/main.pyw")  # Modificado para chamar o interpretador Python atual
         
 else:
@@ -90,7 +138,11 @@ else:
     setar_flag_true()
     print(f"{cor_azul}[{cor_verde}!{cor_azul}] Bibliotecas instaladas. Verificação concluída.{cor_reset}")
     if os.name != "posix":
-        imprimir_banner()
+        dragondfa()
         os.system(f"{sys.executable} ./conf/scripts/main.pyw") 
+
+
+
+
 
 
