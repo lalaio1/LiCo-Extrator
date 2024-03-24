@@ -1,7 +1,7 @@
 import subprocess
 import sys
 import os
-from conf.scripts.func.check_updates import *
+from conf.scripts.func.check_updates import check_for_updates
 
 #variavel das cores
 cor_vermelha = "\033[1;31m"
