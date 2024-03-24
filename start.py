@@ -63,7 +63,10 @@ def instalar_bibliotecas_necessarias():
     bibliotecas = [
     "qdarkstyle",
     "colorama",
-    "PyQt5"
+    "PyQt5",
+    "matplotlib",
+    "pywin32",
+    "pyinstaller"
     ]
 
     print(f"\n{cor_amarela}Verificando bibliotecas...{cor_reset}")
@@ -126,11 +129,13 @@ if __name__ == "__main__":
     flag_status = verificar_e_definir_flag()
 
 if flag_status == "True":
-    print(f"{cor_azul}[{cor_verde}+{cor_azul}] Verificação já foi executada anteriormente. Saindo...{cor_reset}")
+    print(f"{cor_azul}[{cor_verde}+{cor_azul}] Verificação já foi executada anteriormente {cor_reset}")
     os.system("clear" if os.name != "nt" else "cls")
     if os.name != "posix":
         dragondfa()
-        os.system(f"{sys.executable} ./conf/scripts/main.pyw")  # Modificado para chamar o interpretador Python atual
+        if os.name != "posix":
+            python_command = "python" if os.name == "nt" else "python3"
+            os.system(f"{python_command} ./conf/scripts/main.pyw")
         
 else:
     imprimir_banner()
@@ -139,10 +144,6 @@ else:
     print(f"{cor_azul}[{cor_verde}!{cor_azul}] Bibliotecas instaladas. Verificação concluída.{cor_reset}")
     if os.name != "posix":
         dragondfa()
-        os.system(f"{sys.executable} ./conf/scripts/main.pyw") 
-
-
-
-
-
-
+        if os.name != "posix":
+            python_command = "python" if os.name == "nt" else "python3"
+            os.system(f"{python_command} ./conf/scripts/main.pyw")
