@@ -65,7 +65,6 @@ def instalar_bibliotecas_necessarias():
     "colorama",
     "PyQt5",
     "matplotlib",
-    "pywin32",
     "pyinstaller"
     ]
 
