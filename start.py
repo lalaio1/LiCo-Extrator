@@ -1,7 +1,7 @@
 import subprocess
 import sys
 import os
-from conf.scripts.func.check_updates import check_for_updates
+import urllib.request
 
 #variavel das cores
 cor_vermelha = "\033[1;31m"
@@ -98,6 +98,43 @@ def setar_flag_true():
     with open(flag_path, "w") as file:
         file.write("True")
 
+
+
+
+def check_for_updates():
+    try:
+        with urllib.request.urlopen("https://raw.githubusercontent.com/lalaio1/LiCo-Extrator/main/version.txt") as response:
+            latest_version = response.read().decode().strip()
+            current_version = get_current_version()
+            if latest_version != current_version:
+                print("[!] Uma nova versão está disponível. Atualizando...")
+                update_repository()
+                update_version_file(latest_version)
+                print("[/] Atualização concluída com sucesso.")
+            else:
+                print("[i] Você já tem a versão mais recente.")
+    except Exception as e:
+        print(f"[e] Erro ao verificar atualizações: {e}")
+
+def get_current_version():
+    try:
+        with open("version.txt", "r") as file:
+            return file.read().strip()
+    except FileNotFoundError:
+        return ""
+
+def update_repository():
+    try:
+        subprocess.run(["git", "pull"])
+    except Exception as e:
+        print(f"[e] Erro ao atualizar o repositório: {e}")
+
+def update_version_file(version):
+    try:
+        with open("version.txt", "w") as file:
+            file.write(version)
+    except Exception as e:
+        print(f"[e] Erro ao atualizar o arquivo de versão: {e}")
 
 
 def imprimir_banner():
