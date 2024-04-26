@@ -57,7 +57,6 @@ def dragondfa():
             """
     print(banner)
 
-# Chame a função 'imprimir_banner()' onde você deseja exibir o banner
 
 
 def instalar_bibliotecas_necessarias():
@@ -172,10 +171,10 @@ if __name__ == "__main__":
         if os.name == "nt":
             dragondfa()
             python_command = "python"
-        else:  # Ambientes Unix
-            python_command = "python3"
-        check_for_updates()
+
+        
         os.system(f"{python_command} ./conf/scripts/main.pyw")
+        check_for_updates()
     else:
         imprimir_banner()
         instalar_bibliotecas_necessarias()
@@ -184,7 +183,7 @@ if __name__ == "__main__":
         if os.name == "nt":
             dragondfa()
             python_command = "python"
-        else:  # Ambientes Unix
-            python_command = "python3"
-        check_for_updates()
+
+        
         os.system(f"{python_command} ./conf/scripts/main.pyw")
+        check_for_updates()

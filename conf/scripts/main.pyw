@@ -120,7 +120,6 @@ class IconExtractorApp(QtWidgets.QWidget):
 
 
     def clear_ui_fields(self):
-        # Limpa todos os campos da interface
         self.path_edit.clear()
         self.save_edit.clear()
         self.file_type_combobox.setCurrentIndex(0)
