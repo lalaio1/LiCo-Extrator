@@ -65,7 +65,6 @@ def instalar_bibliotecas_necessarias():
     "colorama",
     "PyQt5",
     "matplotlib",
-    "pywin32",
     "pyinstaller"
     ]
 
@@ -78,7 +77,7 @@ def instalar_bibliotecas_necessarias():
             print(f"{cor_reset}[{cor_azul}+{cor_reset}]{cor_verde} {biblioteca} Verificada {cor_reset}")
         except ImportError:
             print(f"{cor_reset}[{cor_vermelha}-{cor_reset}]{cor_vermelha} Instalando biblioteca {biblioteca}{cor_reset}")
-            subprocess.check_call([sys.executable, "-m", "pip", "install", biblioteca])
+            subprocess.check_call(["pip", "install", biblioteca])
 
 def verificar_e_definir_flag():
     flag_path = "conf/flag.txt"
@@ -158,7 +157,7 @@ def imprimir_banner():
 """
     print(f"{cor_azul} {cor_roxa} {banner}{cor_reset}")
 
-
+python_command = "python3"
 
 if __name__ == "__main__":
     os.system("clear" if os.name != "nt" else "cls")
@@ -170,7 +169,6 @@ if __name__ == "__main__":
         os.system("clear" if os.name != "nt" else "cls")
         if os.name == "nt":
             dragondfa()
-            python_command = "python"
 
         
         os.system(f"{python_command} ./conf/scripts/main.pyw")
@@ -182,7 +180,6 @@ if __name__ == "__main__":
         print(f"{cor_azul}[{cor_verde}!{cor_azul}] Bibliotecas instaladas. Verificação concluída.{cor_reset}")
         if os.name == "nt":
             dragondfa()
-            python_command = "python"
 
         
         os.system(f"{python_command} ./conf/scripts/main.pyw")
