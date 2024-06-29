@@ -14,6 +14,8 @@ def check_for_updates():
                 print("[/] Atualização concluída com sucesso.")
             else:
                 print("[i] Você já tem a versão mais recente.")
+    except urllib.error.URLError as e:
+        print(f"[e] Falha ao conectar ao servidor de atualização: {e}")
     except Exception as e:
         print(f"[e] Erro ao verificar atualizações: {e}")
 
@@ -27,8 +29,10 @@ def get_current_version():
 def update_repository():
     try:
         subprocess.run(["git", "pull"])
-    except Exception as e:
+    except subprocess.CalledProcessError as e:
         print(f"[e] Erro ao atualizar o repositório: {e}")
+    except Exception as e:
+        print(f"[e] Erro inesperado ao atualizar o repositório: {e}")
 
 def update_version_file(version):
     try:
@@ -38,5 +42,10 @@ def update_version_file(version):
         print(f"[e] Erro ao atualizar o arquivo de versão: {e}")
 
 if __name__ == "__main__":
-    os.system("clear" if os.name != "nt" else "cls")
-    check_for_updates()
+    try:
+        os.system("clear" if os.name != "nt" else "cls")
+        check_for_updates()
+    except KeyboardInterrupt:
+        print("\n[x] Processo de atualização interrompido pelo usuário.")
+    except Exception as e:
+        print(f"[e] Erro geral: {e}")

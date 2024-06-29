@@ -5,7 +5,6 @@ from PyQt5 import QtWidgets, QtGui, QtCore
 from PyQt5.QtCore import QSize
 from PIL import Image
 
-import requests
 class IconExtractorApp(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
